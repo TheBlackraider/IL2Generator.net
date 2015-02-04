@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IL2Generator", "IL2Generator\IL2Generator.csproj", "{D6E589BE-5B89-4DCA-8AF9-7E1684452860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IL2Viewer", "IL2Viewer\IL2Viewer.csproj", "{0446E90B-5D38-48FE-B4BB-1C2B311C327F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6E589BE-5B89-4DCA-8AF9-7E1684452860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E589BE-5B89-4DCA-8AF9-7E1684452860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E589BE-5B89-4DCA-8AF9-7E1684452860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E589BE-5B89-4DCA-8AF9-7E1684452860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0446E90B-5D38-48FE-B4BB-1C2B311C327F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0446E90B-5D38-48FE-B4BB-1C2B311C327F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0446E90B-5D38-48FE-B4BB-1C2B311C327F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0446E90B-5D38-48FE-B4BB-1C2B311C327F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

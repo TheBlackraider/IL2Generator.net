@@ -1,0 +1,4 @@
+[submodule "IL2Generator.net"]
+	path = IL2Generator.net
+	url = C:/Users/blackraider/Documents/Visual Studio 2013/Projects/IL2Generator/IL2Generator
+	branch = master
