@@ -29,6 +29,7 @@ namespace IL2Generator
         public int DT1Fuel { get; set; }
         public int DT2Fuel { get; set; }
         public int DT3Fuel { get; set; }
-
+        public double minAlt { get; set; }
+        public double attAlt { get; set; }
     }
 }

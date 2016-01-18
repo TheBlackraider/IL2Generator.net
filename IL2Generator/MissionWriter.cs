@@ -36,6 +36,19 @@ namespace IL2Generator
                 writeSessionData();
                 writeHeader("WEATHER");
                 writeWeatherData();
+                writeHeader("Wing");
+                writeWingData();
+                //
+                foreach (AllWings wing in theClass.Wings)
+                {
+                    writeHeader(wing.Name);
+                    writeFlightComposition(wing.Flight);
+                    writeHeader(wing.Name + "_Way");
+                    writeWingWaypoint(wing);
+                }
+
+
+
             }
 
             _writer.Flush();
@@ -87,6 +100,72 @@ namespace IL2Generator
             _writer.Close();
 
             GC.SuppressFinalize(this);
+        }
+
+        void writeWingData()
+        {
+            foreach (AllWings wing in theClass.Wings)
+            {
+                _writer.WriteLine("\t{0}",wing.Name);
+            }
+        }
+
+        void writeFlightComposition(FlightComposition flight)
+        {
+            writeTabStrings("Planes", flight.NumPlanes.ToString());
+           
+            
+            Dictionary<string,int> SkillValues = new Dictionary<string,int>();
+
+            Random rand = new Random();
+
+
+            for (int n = 0; n < flight.NumPlanes; n++)
+            {
+                string str = "Skill" + n.ToString();
+                SkillValues.Add("Skill" + n.ToString(), 0);
+
+                switch (flight.Skill)
+                {
+                    case 0:
+                        if (rand.Next(1, 2) == 1) SkillValues["Skill" + n.ToString()] = 1;
+                        break;
+
+                    case 1:
+                        if (rand.Next(1, 4) == 1) SkillValues["Skill" + n.ToString()] = 0;
+                        break;
+
+                    case 2:
+                        if (rand.Next(1, 4) == 1) SkillValues["Skill" + n.ToString()] = 1;
+                        break;
+
+                    case 3:
+                        if (rand.Next(1, 3) != 1) SkillValues["Skill" + n.ToString()] = 1;
+                        break;
+
+                    default:
+                        SkillValues["Skill" + n.ToString()] = 1;
+                        break;
+                }
+                
+                writeTabStrings(str, SkillValues[str].ToString());
+            }
+        }
+
+        private void writeWingWaypoint(AllWings wing)
+        {
+            if (wing.Waypoints != null)
+            {
+                foreach (Waypoint w in wing.Waypoints)
+                {
+                    writeWaypointData(w);
+                }
+            }
+        }
+
+        private void writeWaypointData(Waypoint way)
+        {
+            _writer.WriteLine("\t{0} {0} {0} {0} {0} &0", way.type.ToString(), way.x, way.y, way.alt, way.speed); 
         }
     }
 }

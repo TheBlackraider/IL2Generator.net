@@ -8,6 +8,9 @@ namespace IL2Generator
 {
     public class Mission
     {
+        private AllWingsContainer _wings;
+        private WaypointContainer _waypoints;
+
         //Cabecera MAIN
 
         public string Map {get; set;}   // MAP
@@ -31,5 +34,17 @@ namespace IL2Generator
 
         // Relaciones
 
+        public AllWingsContainer Wings 
+        {
+            get { return _wings; }
+            set { _wings = value; }
+        }
+
+        //
+        public Mission()
+        {
+            _wings = new AllWingsContainer();
+            _waypoints = new WaypointContainer();
+        }
     }
 }

@@ -80,6 +80,9 @@ namespace IL2Viewer
                 m.Gust = 20;
                 m.Turbulence = 2;
 
+                m.Wings.Add(new AllWings() {Name="FB_101", Nation=Nations.USA, WingType= WingTypes.wAttack, Faction= Factions.Allies, Flight = new FlightComposition{ FlightName="SZ", NumPlanes=3, Skill=1}});
+                m.Wings.Add(new AllWings() { Name = "FB_102", Nation = Nations.USA, WingType = WingTypes.wAttack, Faction = Factions.Allies, Flight = new FlightComposition { FlightName = "SX", NumPlanes = 2, Skill=3 } });
+                
                 mc.Write(m);
 
                 mc.WriteAll();

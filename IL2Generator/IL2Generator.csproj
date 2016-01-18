@@ -43,6 +43,10 @@
     <Compile Include="AllClassesClass.cs" />
     <Compile Include="AllClassesContainer.cs" />
     <Compile Include="AllClassesReader.cs" />
+    <Compile Include="AllFacesContainer.cs" />
+    <Compile Include="AllFacesReader.cs" />
+    <Compile Include="AllLocationFilesContainer.cs" />
+    <Compile Include="AllLocationFilesReadercs.cs" />
     <Compile Include="AllPlaneDB.cs" />
     <Compile Include="AllPlaneDBClass.cs" />
     <Compile Include="AllPlaneDBContainer.cs" />
@@ -55,17 +59,22 @@
     <Compile Include="AllWingsClass.cs" />
     <Compile Include="AllWingsContainer.cs" />
     <Compile Include="AllWingsReader.cs" />
-    <Compile Include="Misc.cs" />
+    <Compile Include="Bio.cs" />
+    <Compile Include="BioList.cs" />
+    <Compile Include="Coord.cs" />
+    <Compile Include="Face.cs" />
+    <Compile Include="FlightComposition.cs" />
+    <Compile Include="LocationFile.cs" />
     <Compile Include="Mission.cs" />
     <Compile Include="MissionClass.cs" />
     <Compile Include="MissionContainer.cs" />
     <Compile Include="MissionReader.cs" />
     <Compile Include="MissionWriter.cs" />
-    <Compile Include="Plane.cs" />
+    <Compile Include="Pilot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <Compile Include="Route.cs" />
+    <Compile Include="Waypoint.cs" />
+    <Compile Include="WaypointContainer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

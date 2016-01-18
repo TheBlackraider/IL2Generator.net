@@ -26,5 +26,12 @@ namespace IL2Generator
         public WingTypes WingType { get; set; }
         public Factions Faction { get; set; }
         public Nations Nation { get; set; }
+
+        //
+        public FlightComposition Flight { get; set; }
+
+        //
+        public WaypointContainer Waypoints { get; set; }
+        
     }
 }
