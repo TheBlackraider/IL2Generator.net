@@ -1,13 +1,6 @@
-﻿/*
- * Creado por SharpDevelop.
- * Usuario: Juan
- * Fecha: 17/01/2016
- * Hora: 17:11
- * 
- * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace IL2Generator
 {
@@ -52,17 +45,21 @@ namespace IL2Generator
 			{
 				try
 				{
-					_placesreader = new PlacesReader(loc.DatFile,_places);
+                    LocationFile l = loc.First();
+
+                    _placesreader = new PlacesReader(l.DatFile,_places);
 				}
 				catch
 				{
 					try
 					{
-						_placesreader = new PlacesReader(loc.Fallback,_places);
+                        LocationFile l = loc.First();
+
+                        _placesreader = new PlacesReader(l.Fallback,_places);
 					}
 					catch
 					{
-						throw new System.Exception("No hay fichero de Localizacionee");
+						throw new System.Exception("No hay fichero de Localizaciones");
 					}
 				}
 						

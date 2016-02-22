@@ -22,6 +22,10 @@ namespace IL2Viewer
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        AllNationsContainer _nations;
+        AllNationsClass _nationclass;
+
         public MainWindow()
         {
             Trace.TraceInformation("Inicializando ventana");
@@ -53,6 +57,9 @@ namespace IL2Viewer
 
             Trace.TraceInformation("Carga terminada");
 
+            _nationclass = new AllNationsClass("AllNations.dat");
+            _nationclass.ReadAll();
+            comboBox.ItemsSource = from nac in _nationclass.GetEnumerable() select nac;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -88,6 +95,11 @@ namespace IL2Viewer
                 mc.WriteAll();
             }
                 
+        }
+
+        private void InitCampaign_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllAirfields.cs" />
+    <Compile Include="AllAirfieldsContainer.cs" />
+    <Compile Include="AllAirfieldsReader.cs" />
+    <Compile Include="AllBridges.cs" />
+    <Compile Include="AllBridgesContainer.cs" />
+    <Compile Include="AllBridgesReader.cs" />
     <Compile Include="AllClasses.cs" />
     <Compile Include="AllClassesClass.cs" />
     <Compile Include="AllClassesContainer.cs" />
@@ -47,10 +53,17 @@
     <Compile Include="AllFacesReader.cs" />
     <Compile Include="AllLocationFilesContainer.cs" />
     <Compile Include="AllLocationFilesReadercs.cs" />
+    <Compile Include="AllNations.cs" />
+    <Compile Include="AllNationsClass.cs" />
+    <Compile Include="AllNationsContainer.cs" />
+    <Compile Include="AllNationsReader.cs" />
     <Compile Include="AllPlaneDB.cs" />
     <Compile Include="AllPlaneDBClass.cs" />
     <Compile Include="AllPlaneDBContainer.cs" />
     <Compile Include="AllPlaneDBReader.cs" />
+    <Compile Include="AllTowns.cs" />
+    <Compile Include="AllTownsContainer.cs" />
+    <Compile Include="AllTownsReader.cs" />
     <Compile Include="AllWeapons.cs" />
     <Compile Include="AllWeaponsClass.cs" />
     <Compile Include="AllWeaponsContainer.cs" />

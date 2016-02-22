@@ -7,6 +7,7 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
+using System.Collections.Generic;
 
 namespace IL2Generator
 {
@@ -17,7 +18,7 @@ namespace IL2Generator
 	{
 		private System.IO.StreamReader _reader;
         private Place theClass;
-        IList<AllClasses> theList;
+        IList<Place> theList;
 
         public string Separator { get; set; }
         public string FileName { get; set; }
@@ -44,9 +45,9 @@ namespace IL2Generator
         {
         	string d = "";
         	
-        	for (int i = 2;i < fd.GetUpperBound;i++)
+        	for (int i = 2;i < fd.Length;i++)
         	{
-        		d += Trim(fd[i]);
+        		d += fd.GetValue(i).ToString().Trim();
         	}
         	
         	return d;
