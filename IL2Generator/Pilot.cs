@@ -7,6 +7,8 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
+using System.Collections.Generic;
+
 
 namespace IL2Generator
 {

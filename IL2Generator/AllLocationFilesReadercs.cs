@@ -7,6 +7,8 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
+using System.Collections.Generic;
+
 
 namespace IL2Generator
 {
@@ -37,7 +39,7 @@ namespace IL2Generator
 
             while ((line = _reader.ReadLine()) != null)
             {
-            	string[] fields = line.Split(Separator.ToCharArray();
+            	string[] fields = line.Split(Separator.ToCharArray());
 
             	theClass = new LocationFile();
             	theClass.Nation = fields[0];

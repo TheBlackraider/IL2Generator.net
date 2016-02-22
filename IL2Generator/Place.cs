@@ -1,24 +1,22 @@
 ﻿/*
  * Creado por SharpDevelop.
  * Usuario: Juan
- * Fecha: 18/01/2016
- * Hora: 12:17
+ * Fecha: 22/02/2016
+ * Hora: 8:45
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
-using System.Collections.Generic;
 
 namespace IL2Generator
 {
 	/// <summary>
-	/// Description of AllLocationFilesContainer.
+	/// Description of Place.
 	/// </summary>
-	public class AllLocationFilesContainer : List<LocationFile>
+	public class Place
 	{
-		public AllLocationFilesContainer()
-		{
-		
-		}
+		public int region {get; set;}
+		public int size {get; set;}
+		public string town {get; set;}
 	}
 }

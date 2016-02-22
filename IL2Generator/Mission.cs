@@ -10,7 +10,8 @@ namespace IL2Generator
     {
         private AllWingsContainer _wings;
         private WaypointContainer _waypoints;
-
+        
+        public string Nation {get; set;}
         //Cabecera MAIN
 
         public string Map {get; set;}   // MAP
@@ -45,6 +46,8 @@ namespace IL2Generator
         {
             _wings = new AllWingsContainer();
             _waypoints = new WaypointContainer();
+            
+            Nation = "USSR";	// Por defecto
         }
     }
 }
