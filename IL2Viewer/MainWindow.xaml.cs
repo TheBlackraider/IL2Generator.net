@@ -99,7 +99,7 @@ namespace IL2Viewer
 
         private void InitCampaign_Click(object sender, RoutedEventArgs e)
         {
-
+            AllNations nation = (AllNations) comboBox.SelectedItem;
         }
     }
 }

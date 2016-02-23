@@ -74,6 +74,8 @@
     <Compile Include="AllWingsReader.cs" />
     <Compile Include="Bio.cs" />
     <Compile Include="BioList.cs" />
+    <Compile Include="Campaigns.cs" />
+    <Compile Include="CampaignsList.cs" />
     <Compile Include="Coord.cs" />
     <Compile Include="Face.cs" />
     <Compile Include="FlightComposition.cs" />
@@ -85,6 +87,8 @@
     <Compile Include="MissionReader.cs" />
     <Compile Include="MissionWriter.cs" />
     <Compile Include="Pilot.cs" />
+    <Compile Include="PilotProfile.cs" />
+    <Compile Include="PilotProfileReader.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="PlacesContainer.cs" />
     <Compile Include="PlacesReader.cs" />

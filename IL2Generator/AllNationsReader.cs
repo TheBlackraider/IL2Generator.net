@@ -38,7 +38,7 @@ namespace IL2Generator
                 theClass.Nation = fields[0];
                 theClass.Branch = fields[1];
                 theClass.Faction = (Factions) Enum.Parse(typeof(Factions), fields[2]);
-                theClass.Nation = fields[0];
+                theClass.Config = fields[3];
 
                 theList.Add(theClass);
             }

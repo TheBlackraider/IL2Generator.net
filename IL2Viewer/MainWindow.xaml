@@ -31,12 +31,12 @@
                 <Grid Background="#FFE5E5E5">
                     <Button Content="Generar Mission" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="149" Height="41" Click="Button_Click"/>
                     <Button x:Name="InitCampaign" Content="Inicializar Campaña" HorizontalAlignment="Left" Height="42" Margin="58,57,0,0" VerticalAlignment="Top" Width="149" Click="InitCampaign_Click"/>
-                    <ComboBox ItemsSource="{Binding}" x:Name="comboBox" HorizontalAlignment="Left" Height="19" Margin="58,10,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.799,0.243">
+                    <ComboBox ItemsSource="{Binding}" x:Name="comboBox" HorizontalAlignment="Left" Height="27" Margin="58,10,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.799,0.243">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Nation}"/>
-                                    <TextBlock Text="{Binding Branch}"/>
+                                    <TextBlock Text="{Binding Nation}" Padding="5"/>
+                                    <TextBlock Text="{Binding Branch}" Padding="5"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
