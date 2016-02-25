@@ -15,10 +15,12 @@ namespace IL2Generator
         public string FileName { get; set; }
 
 
-        public PilotProfileReader(string fileName)
+        public PilotProfileReader(PilotProfile profile, string fileName)
         {
             FileName = fileName;
             Separator = ";";
+            theClass = profile;
+
             _reader = new System.IO.StreamReader(FileName);
         }
 
@@ -27,7 +29,6 @@ namespace IL2Generator
             string line;
 
             int i = 0;
-            theClass = new PilotProfile();
 
             if ((line = _reader.ReadLine()) != null)
             {
@@ -74,7 +75,7 @@ namespace IL2Generator
                 Campaigns c = new Campaigns();
 
                 c.Name = fields[0];
-                c.Plane = null;
+                c.Plane = fields[1];
 
                 theClass.Campaigns.Add(c);
             }

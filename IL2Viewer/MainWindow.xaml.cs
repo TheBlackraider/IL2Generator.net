@@ -100,6 +100,29 @@ namespace IL2Viewer
         private void InitCampaign_Click(object sender, RoutedEventArgs e)
         {
             AllNations nation = (AllNations) comboBox.SelectedItem;
+
+            PilotProfile profile = new PilotProfile();
+            PilotProfileReader preader = new PilotProfileReader(profile, nation.Config);
+
+            // TODO SetGlobal
+            CampaignGenerator cgen = new CampaignGenerator();
+
+            preader.ReadAll();
+
+            lstOutput.Items.Add("Piloto: " + profile.FirstName + " " + profile.LastName);
+            lstOutput.Items.Add("Dir: " + profile.Directory);
+            lstOutput.Items.Add("Lang:" + profile.Language);
+
+            //txtoutput.Text += "======================================="; 
+            foreach (Campaigns c in profile.Campaigns)
+            {
+                lstOutput.Items.Add("Campaña:" + c.Name + " - " + c.Plane);
+            }
+
+            cgen.MakeID(profile.Directory);
+            cgen.Language = profile.Language;
+            cgen.InstantVictory = profile.Instant;
+
         }
     }
 }

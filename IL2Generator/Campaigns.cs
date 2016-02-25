@@ -9,6 +9,6 @@ namespace IL2Generator
     public class Campaigns
     {
         public string Name { get; set; }
-        public AllPlaneDB Plane { get; set; }
+        public string Plane { get; set; }
     }
 }
