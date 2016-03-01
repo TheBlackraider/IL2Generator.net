@@ -21,7 +21,14 @@ namespace IL2Generator
             Separator = ";";
             theClass = profile;
 
-            _reader = new System.IO.StreamReader(FileName);
+            try
+            {
+                _reader = new System.IO.StreamReader(FileName);
+            }
+            catch
+            {
+                throw new System.Exception("No existe el archivo especificado : " + FileName);
+            }
         }
 
         public void ReadAll()

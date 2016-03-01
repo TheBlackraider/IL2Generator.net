@@ -76,6 +76,7 @@
     <Compile Include="BioList.cs" />
     <Compile Include="CampaignGenerator.cs" />
     <Compile Include="Campaigns.cs" />
+    <Compile Include="CampaignSettingsReader.cs" />
     <Compile Include="CampaignsList.cs" />
     <Compile Include="Coord.cs" />
     <Compile Include="Face.cs" />

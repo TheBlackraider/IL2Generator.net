@@ -102,12 +102,27 @@ namespace IL2Viewer
             AllNations nation = (AllNations) comboBox.SelectedItem;
 
             PilotProfile profile = new PilotProfile();
-            PilotProfileReader preader = new PilotProfileReader(profile, nation.Config);
+            PilotProfileReader preader;
+
+            try
+            {
+                preader = new PilotProfileReader(profile, nation.Config);
+                preader.ReadAll();
+            }
+            catch
+            {
+                profile.FirstName = "Black";
+                profile.LastName = "Raider";
+                profile.Language = "ENG";
+                profile.Directory = @"missions\campaign\de\DGen_C_Lvov41doe0";
+                profile.Campaigns.Add(new Campaigns() { Name = "Lvov41", Plane = "BF_109F2" });
+
+            }
 
             // TODO SetGlobal
             CampaignGenerator cgen = new CampaignGenerator();
 
-            preader.ReadAll();
+            lstOutput.Items.Clear();
 
             lstOutput.Items.Add("Piloto: " + profile.FirstName + " " + profile.LastName);
             lstOutput.Items.Add("Dir: " + profile.Directory);
@@ -122,6 +137,8 @@ namespace IL2Viewer
             cgen.MakeID(profile.Directory);
             cgen.Language = profile.Language;
             cgen.InstantVictory = profile.Instant;
+
+            //TODO Misc.ReadSettings -> CampaignsSettingsReader
 
         }
     }
